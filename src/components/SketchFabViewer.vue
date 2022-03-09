@@ -1,17 +1,14 @@
 <template>
-  <div class="sketchfab-viewer image is-16by9">
-    <!-- <div v-if="loading">Loading...</div> -->
-    <iframe
-      id="sketchfab-iframe"
-      ref="sketchfabIframe"
-      src=""
-      sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-      title="Sketchfab iframe"
-      allow="autoplay; fullscreen; vr"
-      :autoplay="true"
-      class="has-ratio"
-    />
-  </div>
+  <iframe
+    id="sketchfab-iframe"
+    ref="sketchfabIframe"
+    src=""
+    sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+    title="Sketchfab iframe"
+    allow="autoplay; fullscreen; vr"
+    :autoplay="true"
+    class="aspect-video"
+  />
 </template>
 
 <script>
@@ -69,21 +66,3 @@ export default {
   },
 }
 </script>
-<style lang="scss" scoped>
-.image {
-  display: block;
-}
-.is-16by9 {
-  padding-top: 56.25%;
-  max-width: 1000px;
-}
-.has-ratio {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-}
-</style>

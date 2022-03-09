@@ -19,7 +19,7 @@
       <SketchFabViewer
         v-if="sketchFabUid"
         :uid="sketchFabUid"
-        class="mx-auto rounded-t-sm"
+        class="mx-auto rounded-t-sm w-full lg:max-w-5xl mt-4"
         @failure="sketchFabfailure = true"
       />
     </figure>

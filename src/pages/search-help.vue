@@ -19,7 +19,7 @@
               :aria-label="$t('search-guide.exact.aria-label')"
               href='https://search.creativecommons.org/search?q="Claude%20Monet"'
             >
-              <em>{{ $t('search-guide.exact.claude-monet') }}</em>
+              <code>{{ $t('search-guide.exact.claude-monet') }}</code>
             </VLink>
             <!-- eslint-enable -->
           </template>
@@ -109,7 +109,7 @@
               :aria-label="$t('search-guide.example.and.aria-label')"
               href="https://search.creativecommons.org/search?q=dog%2Bcat"
             >
-              <em>{{ $t('search-guide.example.and.example') }}</em>
+              <code>{{ $t('search-guide.example.and.example') }}</code>
             </VLink>
           </template>
           <template #br>
@@ -123,7 +123,7 @@
               :aria-label="$t('search-guide.example.or.aria-label')"
               href="https://search.creativecommons.org/search?q=dog%7Ccat"
             >
-              <em>{{ $t('search-guide.example.or.example') }}</em>
+              <code>{{ $t('search-guide.example.or.example') }}</code>
             </VLink>
           </template>
           <template #br>
@@ -137,11 +137,11 @@
           class="mt-4"
         >
           <template #operator>
-            <em
+            <code
               :aria-label="
                 $t('search-guide.example.negate.operator-aria-label')
               "
-              >- {{ $t('search-guide.example.negate.operator-name') }}</em
+              >- {{ $t('search-guide.example.negate.operator-name') }}</code
             >
           </template>
         </i18n>
@@ -152,7 +152,7 @@
               :aria-label="$t('search-guide.example.negate.aria-label')"
               href="https://search.creativecommons.org/search?q=dog%20-pug"
             >
-              <em>{{ $t('search-guide.example.negate.example') }}</em>
+              <code>{{ $t('search-guide.example.negate.example') }}</code>
             </VLink>
           </template>
           <template #br>
@@ -166,8 +166,8 @@
           class="mt-4"
         >
           <template #operator>
-            <em :aria-label="$t('search-guide.example.prefix.aria-label')"
-              >* {{ $t('search-guide.example.prefix.operator-name') }}</em
+            <code :aria-label="$t('search-guide.example.prefix.aria-label')"
+              >* {{ $t('search-guide.example.prefix.operator-name') }}</code
             >
           </template>
         </i18n>
@@ -178,7 +178,7 @@
               :aria-label="$t('search-guide.example.prefix.aria-label')"
               href="https://search.creativecommons.org/search?q=net%2a"
             >
-              <em>{{ $t('search-guide.example.prefix.example') }}</em>
+              <code>{{ $t('search-guide.example.prefix.example') }}</code>
             </VLink>
           </template>
           <template #br>
@@ -192,7 +192,7 @@
           class="mt-4"
         >
           <template #highlight>
-            <em>( and )</em>
+            <code>( and )</code>
           </template>
         </i18n>
 
@@ -206,7 +206,7 @@
               :aria-label="$t('search-guide.example.precedence.aria-label')"
               href="https://search.creativecommons.org/search?q=dogs%20%2B%20%28corgis%20%7C%20labrador%29"
             >
-              <em>{{ $t('search-guide.example.precedence.example') }}</em>
+              <code>{{ $t('search-guide.example.precedence.example') }}</code>
             </VLink>
           </template>
           <template #br>
@@ -220,7 +220,7 @@
           class="mt-4"
         >
           <template #highlight>
-            <em aria-label="tilde N">~N</em>
+            <code aria-label="tilde N">~N</code>
           </template>
           <template #link>
             <VLink href="http://en.wikipedia.org/wiki/Levenshtein_distance">
@@ -239,7 +239,7 @@
               :aria-label="$t('search-guide.example.fuzziness.aria-label')"
               href="https://search.creativecommons.org/search?q=theatre~1"
             >
-              <em>{{ $t('search-guide.example.fuzziness.example') }}</em>
+              <code>{{ $t('search-guide.example.fuzziness.example') }}</code>
             </VLink>
           </template>
           <template #br>
@@ -274,8 +274,3 @@ const SearchHelpPage = {
 
 export default SearchHelpPage
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-@import '~/styles/text-only-page.scss';
-</style>

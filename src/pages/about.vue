@@ -105,7 +105,7 @@ const AboutPage = defineComponent({
 export default AboutPage
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 @import '~/styles/text-only-page.scss';
 
 .table.is-bordered {

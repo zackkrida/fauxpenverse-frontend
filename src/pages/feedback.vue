@@ -46,7 +46,7 @@
             tabindex="0"
           >
             <iframe
-              class="form-iframe"
+              class="w-full h-[1200px] border-none"
               :aria-label="$t(`feedback.aria.${name}`)"
               :src="forms[name]"
               :title="`${name} form`"
@@ -101,10 +101,3 @@ export const FeedbackPage = {
 
 export default FeedbackPage
 </script>
-<style lang="scss" scoped>
-.form-iframe {
-  width: 100%;
-  height: 1200px;
-  border: none;
-}
-</style>

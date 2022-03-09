@@ -1,13 +1,19 @@
 <template>
-  <ul class="buttons is-centered">
+  <ul class="flex gap-2 justify-center">
     <li v-for="(browser, key) in browsers" :key="key">
-      <VLink
+      <VButton
+        as="VLink"
         :href="browser.extUrl"
-        class="browser-button button small me-2 is-opaque"
+        variant="tertiary"
+        class="font-bold"
       >
         {{ $t(`browsers.${key}`) }}
-        <img class="ms-2" :src="browser.logo" :alt="$t(`browsers.${key}`)" />
-      </VLink>
+        <img
+          class="ms-2 w-6 h-6"
+          :src="browser.logo"
+          :alt="$t(`browsers.${key}`)"
+        />
+      </VButton>
     </li>
   </ul>
 </template>
@@ -47,14 +53,3 @@ export default {
   },
 }
 </script>
-
-<style scoped lang="scss">
-.browser-button {
-  background-color: $color-white;
-
-  img {
-    height: 1.5em;
-    width: 1.5em;
-  }
-}
-</style>

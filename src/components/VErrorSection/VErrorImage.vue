@@ -47,7 +47,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style scoped>
 ::v-deep .attribution {
   @apply text-dark-charcoal-70;
 

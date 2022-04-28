@@ -10,6 +10,7 @@
       :pressed="visibleRef"
       v-bind="triggerA11yProps"
       @toggle="onTriggerClick"
+      @keydown="onKeyDown"
     />
     <Component :is="filterComponent" v-bind="options" @close="onTriggerClick">
       <VSearchGridFilter @close="onTriggerClick" />
@@ -30,6 +31,9 @@ import {
 
 import { useFilterSidebarVisibility } from '~/composables/use-filter-sidebar-visibility'
 import { useBodyScrollLock } from '~/composables/use-body-scroll-lock'
+
+import { keycodes } from '~/constants/key-codes'
+import { Focus, focusIn } from '~/utils/focus-management'
 
 import VTeleport from '~/components/VTeleport/VTeleport.vue'
 import VFilterButton from '~/components/VHeader/VFilterButton.vue'
@@ -105,23 +109,48 @@ export default {
         open()
       }
     }
+
+    /**
+     * Focus the first element in the sidebar when navigating from the VFilterButton
+     * using keyboard `Tab` key.
+     * @param { KeyboardEvent } event
+     */
+    const onKeyDown = (event) => {
+      if (
+        isMinScreenMd.value &&
+        event.key === keycodes.Tab &&
+        filterSidebar.isVisible.value
+      ) {
+        // Prevent over-tabbing to the element after the target one
+        event.preventDefault()
+        // Cannot use refs when using portals (for sidebar)
+        focusIn(document.querySelector('#filters'), Focus.First)
+      }
+    }
+
+    /**
+     * @typedef {{mode?: string, 'trigger-element'?: import('@nuxtjs/composition-api').ComputedRef<HTMLElement|null>, hide?: close, visible: import('@nuxtjs/composition-api').Ref<boolean>, 'aria-label'?: string}} FilterOptions
+     */
+
+    /** @type {FilterOptions} */
     const mobileOptions = {
       visible: visibleRef,
-      'trigger-element': computed(() => nodeRef?.value?.firstChild),
+      'trigger-element':
+        /** @type {import('@nuxtjs/composition-api').ComputedRef<HTMLElement|null>}*/ (
+          computed(() => nodeRef?.value?.firstChild)
+        ),
       hide: close,
-      'aria-label': i18n.t('header.filter-button.simple'),
+      'aria-label': i18n.t('header.filter-button.simple').toString(),
       mode: 'mobile',
     }
 
+    /** @type {FilterOptions} */
     const desktopOptions = {
       to: 'sidebar',
       visible: visibleRef,
     }
     /**
-     * @type { import('@nuxtjs/composition-api').Ref<{
-     * 'trigger-element'?: import('@nuxtjs/composition-api').ComputedRef<HTMLElement|null>,
-     * hide?: () => {}, visible: import('@nuxtjs/composition-api').Ref<boolean>,
-     * 'aria-label': [string], to?: string, mode?: string }> }
+     * @type {Ref<FilterOptions>}
      */
     const options = ref(mobileOptions)
     onMounted(() => {
@@ -153,6 +182,7 @@ export default {
       open,
       close,
       onTriggerClick,
+      onKeyDown,
       triggerA11yProps,
       isMinScreenMd,
       options,

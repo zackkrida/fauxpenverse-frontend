@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[106],{"./src/locales/ido.json":function(module){module.exports=JSON.parse("{}")}}]);

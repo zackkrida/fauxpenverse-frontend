@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[118],{"./src/locales/kk.json":function(module){module.exports=JSON.parse("{}")}}]);

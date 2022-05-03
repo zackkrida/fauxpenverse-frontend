@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[135],{"./src/locales/mri.json":function(module){module.exports=JSON.parse("{}")}}]);

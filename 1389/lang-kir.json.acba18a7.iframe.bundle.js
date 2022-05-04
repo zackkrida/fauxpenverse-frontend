@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[116],{"./src/locales/kir.json":function(module){module.exports=JSON.parse("{}")}}]);

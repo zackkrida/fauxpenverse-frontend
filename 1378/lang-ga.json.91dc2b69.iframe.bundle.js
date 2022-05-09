@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[93],{"./src/locales/ga.json":function(module){module.exports=JSON.parse("{}")}}]);

@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[174],{"./src/locales/tir.json":function(module){module.exports=JSON.parse("{}")}}]);

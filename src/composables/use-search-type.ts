@@ -6,6 +6,7 @@ import {
   AUDIO,
   IMAGE,
   MODEL_3D,
+  SupportedSearchType,
 } from '~/constants/media'
 
 import { useSearchStore } from '~/stores/search'
@@ -25,8 +26,10 @@ const searchTypes = [...supportedSearchTypes]
 
 export default function useSearchType() {
   const activeType = computed(() => useSearchStore().searchType)
+
   const previousSearchType = ref(activeType.value)
-  const setActiveType = (searchType) => {
+
+  const setActiveType = (searchType: SupportedSearchType) => {
     if (previousSearchType.value === searchType) return
     useSearchStore().setSearchType(searchType)
     previousSearchType.value = searchType

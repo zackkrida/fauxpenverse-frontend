@@ -25,8 +25,8 @@
   </VButton>
 </template>
 
-<script>
-import { defineComponent, computed } from '@nuxtjs/composition-api'
+<script lang="ts">
+import { defineComponent, computed, PropType } from '@nuxtjs/composition-api'
 
 import { isMinScreen } from '~/composables/use-media-query'
 import { useBrowserIsMobile } from '~/composables/use-browser-detection'
@@ -36,11 +36,7 @@ import VButton from '~/components/VButton.vue'
 
 import searchIcon from '~/assets/icons/search.svg'
 
-/**
- * @typedef Props
- * @property {'small' | 'medium' | 'large' | 'standalone'} size
- * @property {boolean} isHomeRoute
- */
+type SearchButtonSize = 'small' | 'medium' | 'large' | 'standalone'
 
 export default defineComponent({
   name: 'VSearchButton',
@@ -48,21 +44,14 @@ export default defineComponent({
   inheritAttrs: false,
   props: {
     size: {
-      type: String,
+      type: String as PropType<SearchButtonSize>,
       required: true,
-      /**
-       * @param {string} v
-       */
-      validator: (v) => ['small', 'medium', 'large', 'standalone'].includes(v),
     },
     isHomeRoute: {
       type: Boolean,
       default: false,
     },
   },
-  /**
-   * @param {Props} props
-   */
   setup(props) {
     const isMobile = useBrowserIsMobile()
     const isMinScreenMd = isMinScreen('md', { shouldPassInSSR: !isMobile })

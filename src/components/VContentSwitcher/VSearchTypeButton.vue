@@ -23,18 +23,22 @@
     />
   </VButton>
 </template>
-<script>
+
+<script lang="ts">
 import {
   computed,
   defineComponent,
   inject,
-  useContext,
+  PropType,
+  Ref,
 } from '@nuxtjs/composition-api'
 
-import { ALL_MEDIA } from '~/constants/media'
-import useSearchType from '~/composables/use-search-type'
+import { ALL_MEDIA, SupportedSearchType } from '~/constants/media'
+
 import { isMinScreen } from '~/composables/use-media-query'
-import { isValidSearchType } from '~/utils/prop-validators'
+import { useI18n } from '~/composables/use-i18n'
+import useSearchType from '~/composables/use-search-type'
+import { isHeaderScrolledKey } from '~/layouts/default.vue'
 
 import VIcon from '~/components/VIcon/VIcon.vue'
 import VButton from '~/components/VButton.vue'
@@ -50,19 +54,20 @@ export default defineComponent({
       required: true,
     },
     activeItem: {
-      type: String,
+      type: String as PropType<SupportedSearchType>,
       default: ALL_MEDIA,
-      validator: isValidSearchType,
     },
     type: {
-      type: String,
+      type: String as PropType<'header' | 'searchbar'>,
       default: 'header',
-      validator: (v) => ['header', 'searchbar'].includes(v),
     },
   },
   setup(props) {
-    const { i18n } = useContext()
-    const isHeaderScrolled = inject('isHeaderScrolled', null)
+    const i18n = useI18n()
+    const isHeaderScrolled: Ref<boolean> | null = inject(
+      isHeaderScrolledKey,
+      null
+    )
     const isMinScreenMd = isMinScreen('md', { shouldPassInSSR: true })
 
     const { icons, activeType: activeItem } = useSearchType()

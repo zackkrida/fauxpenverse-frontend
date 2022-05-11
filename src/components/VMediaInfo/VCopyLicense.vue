@@ -32,11 +32,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType, useContext } from '@nuxtjs/composition-api'
+import { defineComponent, PropType } from '@nuxtjs/composition-api'
 
 import { AttributionOptions, getAttribution } from '~/utils/attribution-html'
 
 import type { Media } from '~/models/media'
+
+import { useI18n } from '~/composables/use-i18n'
 
 import VTabs from '~/components/VTabs/VTabs.vue'
 import VTab from '~/components/VTabs/VTab.vue'
@@ -44,7 +46,7 @@ import VLicenseTabPanel from '~/components/VMediaInfo/VLicenseTabPanel.vue'
 
 const tabs = ['rich', 'html', 'plain']
 
-const VCopyLicense = defineComponent({
+export default defineComponent({
   name: 'VCopyLicense',
   components: { VTabs, VTab, VLicenseTabPanel },
   props: {
@@ -54,7 +56,7 @@ const VCopyLicense = defineComponent({
     },
   },
   setup(props) {
-    const { i18n } = useContext()
+    const i18n = useI18n()
     const getAttributionMarkup = (options?: AttributionOptions) =>
       getAttribution(props.media, i18n, options)
     return {
@@ -64,5 +66,4 @@ const VCopyLicense = defineComponent({
     }
   },
 })
-export default VCopyLicense
 </script>

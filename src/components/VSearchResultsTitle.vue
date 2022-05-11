@@ -7,24 +7,21 @@
   </h1>
 </template>
 
-<script>
-import { defineComponent } from '@nuxtjs/composition-api'
+<script lang="ts">
+import { defineComponent, PropType } from '@nuxtjs/composition-api'
 
-const sizes = {
-  DEFAULT: 'default',
-  LARGE: 'large',
-}
-const VSearchResultsTitle = defineComponent({
+type TitleSize = 'default' | 'large'
+
+export default defineComponent({
   name: 'VSearchResultsTitle',
   props: {
     size: {
       required: false,
-      default: sizes.DEFAULT,
-      validator: (value) => Object.values(sizes).includes(value),
+      default: 'default',
+      type: String as PropType<TitleSize>,
     },
   },
 })
-export default VSearchResultsTitle
 </script>
 
 <style scoped>

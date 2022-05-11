@@ -36,6 +36,8 @@
 </template>
 
 <script>
+import { defineComponent } from '@nuxtjs/composition-api'
+
 import { isLicense, isDeprecated } from '~/utils/license'
 
 import VLicenseElements from '~/components/VLicense/VLicenseElements.vue'
@@ -45,7 +47,7 @@ import VLink from '~/components/VLink.vue'
  * Renders the explanation of the license passed to it by breaking it down to
  * its constituent clauses.
  */
-export default {
+export default defineComponent({
   name: 'VLicenseExplanation',
   components: {
     VLicenseElements,
@@ -60,17 +62,16 @@ export default {
       required: true,
     },
   },
-  computed: {
+  setup(props) {
     /**
      * Public domain marks such as CC0 and PDM are not technically licenses.
      * @return {boolean} true if the license is not CC0 or PDM, false otherwise
      */
-    isTechnicallyLicense() {
-      return isLicense(this.license)
-    },
-  },
-  methods: {
-    getLicenseDeedLink(licenseTerm) {
+    const isTechnicallyLicense = () => {
+      return isLicense(props.license)
+    }
+
+    const getLicenseDeedLink = (licenseTerm) => {
       let fragment
       if (licenseTerm === 'cc0') {
         fragment = 'publicdomain/zero/1.0'
@@ -82,7 +83,11 @@ export default {
         fragment = `licenses/${licenseTerm}/4.0`
       }
       return `https://creativecommons.org/${fragment}/?ref=openverse`
-    },
+    }
+    return {
+      getLicenseDeedLink,
+      isTechnicallyLicense,
+    }
   },
-}
+})
 </script>

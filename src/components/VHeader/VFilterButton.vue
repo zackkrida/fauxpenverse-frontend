@@ -32,19 +32,22 @@ import {
   defineComponent,
   inject,
   toRefs,
-  useContext,
   ref,
 } from '@nuxtjs/composition-api'
 
 import { useSearchStore } from '~/stores/search'
 import { defineEvent } from '~/types/emits'
+import { useI18n } from '~/composables/use-i18n'
+
+import { isHeaderScrolledKey } from '~/layouts/default.vue'
 
 import VButton from '~/components/VButton.vue'
 import VIcon from '~/components/VIcon/VIcon.vue'
+import { isMinScreenMdKey } from '~/components/VHeader/VHeader.vue'
 
 import filterIcon from '~/assets/icons/filter.svg'
 
-const VFilterButton = defineComponent({
+export default defineComponent({
   name: 'VFilterButton',
   components: {
     VIcon,
@@ -61,11 +64,11 @@ const VFilterButton = defineComponent({
     toggle: defineEvent(),
   },
   setup(props) {
-    const { i18n } = useContext()
+    const i18n = useI18n()
     const searchStore = useSearchStore()
     const { pressed } = toRefs(props)
-    const isMinScreenMd = inject('isMinScreenMd', ref(false))
-    const isHeaderScrolled = inject('isHeaderScrolled', ref(false))
+    const isMinScreenMd = inject(isMinScreenMdKey, ref(false))
+    const isHeaderScrolled = inject(isHeaderScrolledKey, ref(false))
     const filterCount = computed(() => searchStore.appliedFilterCount)
     const filtersAreApplied = computed(() => filterCount.value > 0)
 
@@ -119,6 +122,4 @@ const VFilterButton = defineComponent({
     }
   },
 })
-
-export default VFilterButton
 </script>

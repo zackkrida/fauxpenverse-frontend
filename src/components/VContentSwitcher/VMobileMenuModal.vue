@@ -33,8 +33,9 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import {
+  ComponentInstance,
   computed,
   defineComponent,
   onMounted,
@@ -44,8 +45,10 @@ import {
 } from '@nuxtjs/composition-api'
 
 import usePages from '~/composables/use-pages'
-import useSearchType from '~/composables/use-search-type'
+
 import { useBodyScrollLock } from '~/composables/use-body-scroll-lock'
+
+import useSearchType from '~/composables/use-search-type'
 
 import VModalContent from '~/components/VModal/VModalContent.vue'
 import VSearchTypes from '~/components/VContentSwitcher/VSearchTypes.vue'
@@ -70,10 +73,9 @@ export default defineComponent({
     const content = useSearchType()
     const pages = usePages()
 
-    /** @type {import('@nuxtjs/composition-api').Ref<import('vue/types/vue').Vue | null>} */
-    const searchTypesNode = ref(null)
-    const modalRef = ref(null)
-    const triggerContainerRef = ref(null)
+    const searchTypesNode = ref<ComponentInstance | null>(null)
+    const modalRef = ref<HTMLElement | null>(null)
+    const triggerContainerRef = ref<HTMLElement | null>(null)
 
     const closeMenu = () => close()
 
@@ -85,8 +87,13 @@ export default defineComponent({
       'aria-haspopup': 'dialog',
     })
 
-    const triggerRef = ref()
-    onMounted(() => (triggerRef.value = triggerContainerRef.value?.firstChild))
+    const triggerRef = ref<HTMLElement | null>()
+    onMounted(
+      () =>
+        (triggerRef.value = triggerContainerRef.value?.firstChild
+          ? (triggerContainerRef.value.firstChild as HTMLElement)
+          : null)
+    )
 
     const initialFocusElement = computed(() =>
       searchTypesNode.value?.$el?.querySelector('[aria-checked="true"]')

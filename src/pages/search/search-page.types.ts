@@ -1,8 +1,9 @@
 import type { SupportedMediaType } from '~/constants/media'
 import type { Media } from '~/models/media'
 import type { FetchState } from '~/composables/use-fetch-state'
+import type { ProperlyExtractPropTypes } from '~/types/prop-extraction'
 
-import type { ExtractPropTypes, PropType } from '@nuxtjs/composition-api'
+import type { PropType } from '@nuxtjs/composition-api'
 
 export const propTypes = {
   resultItems: {
@@ -26,4 +27,4 @@ export const propTypes = {
     required: false,
   },
 }
-export type SearchPageProps = ExtractPropTypes<typeof propTypes>
+export type SearchPageProps = ProperlyExtractPropTypes<typeof propTypes>

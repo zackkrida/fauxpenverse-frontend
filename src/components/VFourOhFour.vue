@@ -35,7 +35,7 @@
         :value="searchTerm"
         :label-text="$t('404.search-placeholder')"
         field-id="404-search"
-        :placeholder="$t('404.search-placeholder')"
+        :placeholder="$t('404.search-placeholder').toString()"
         size="standalone"
         @input="setSearchTerm"
         @submit="handleSearch"
@@ -62,7 +62,7 @@ import Oops from '~/assets/oops.svg?inline'
 import OpenverseLogo from '~/assets/logo.svg?inline'
 import OpenverseBrand from '~/assets/brand.svg?inline'
 
-const VFourOhFour = defineComponent({
+export default defineComponent({
   name: 'VFourOhFour',
   components: {
     OpenverseLogo,
@@ -71,7 +71,6 @@ const VFourOhFour = defineComponent({
     VLink,
     VSearchBar,
   },
-  props: ['error'],
   setup() {
     const mediaStore = useMediaStore()
     const searchStore = useSearchStore()
@@ -113,7 +112,6 @@ const VFourOhFour = defineComponent({
     ],
   },
 })
-export default VFourOhFour
 </script>
 
 <style>

@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[76],{"./src/locales/es-gt.json":function(module){module.exports=JSON.parse("{}")}}]);

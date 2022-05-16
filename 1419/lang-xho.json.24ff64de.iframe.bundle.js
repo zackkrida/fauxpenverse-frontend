@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[186],{"./src/locales/xho.json":function(module){module.exports=JSON.parse("{}")}}]);

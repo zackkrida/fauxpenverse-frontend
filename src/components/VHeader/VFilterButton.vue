@@ -41,7 +41,7 @@ import { useI18n } from '~/composables/use-i18n'
 
 import { isHeaderScrolledKey } from '~/layouts/default.vue'
 
-import VButton from '~/components/VButton.vue'
+import VButton, { ButtonVariant } from '~/components/VButton.vue'
 import VIcon from '~/components/VIcon/VIcon.vue'
 import { isMinScreenMdKey } from '~/components/VHeader/VHeader.vue'
 
@@ -78,7 +78,9 @@ export default defineComponent({
      */
     const variant = computed(() => {
       // Show the bordered state by default, unless below md
-      let value = isMinScreenMd.value ? 'tertiary' : 'action-menu'
+      let value: ButtonVariant = isMinScreenMd.value
+        ? 'tertiary'
+        : 'action-menu'
 
       if (isHeaderScrolled.value) {
         value = 'action-menu'

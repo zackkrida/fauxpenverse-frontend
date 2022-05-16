@@ -15,7 +15,6 @@ import { computed, defineComponent } from '@nuxtjs/composition-api'
 
 import { useMediaStore } from '~/stores/media'
 import { useSearchStore } from '~/stores/search'
-
 import { useI18n } from '~/composables/use-i18n'
 
 import VButton from '~/components/VButton.vue'

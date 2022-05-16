@@ -223,8 +223,6 @@ export default defineComponent({
         query,
       })
       router.push(newPath)
-
-      await mediaStore.fetchMedia()
     }
 
     return {

@@ -1,7 +1,7 @@
 # this build is triggered when a new pull request has been merged
 # into the main branch
 
-name: openverse/deploy/staging
+name: fauxpenverse/deploy/staging
 
 on:
   push:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: staging
-      url: https://search-staging.openverse.engineering
+      url: https://search-staging.fauxpenverse.engineering
 
     steps:
       # download the source code into the runner

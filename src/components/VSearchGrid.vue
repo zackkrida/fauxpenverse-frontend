@@ -87,7 +87,7 @@ export default defineComponent({
   setup(props) {
     const hasNoResults = computed(() => {
       // noResult is hard-coded for search types that are not currently
-      // supported by Openverse built-in search
+      // supported by fauxpenverse built-in search
       return props.supported
         ? props.query.q !== '' && props.resultsCount === 0
         : false

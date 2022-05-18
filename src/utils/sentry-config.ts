@@ -14,8 +14,8 @@ export const sentryConfig: ModuleConfiguration = {
   disabled: !isProd,
   lazy: true,
   clientConfig: {
-    // Only allow errors that come from an actual openverse.engineering subdomain
-    allowUrls: [/^https?:\/\/(.*)\.openverse\.engineering/],
+    // Only allow errors that come from an actual fauxpenverse.engineering subdomain
+    allowUrls: [/^https?:\/\/(.*)\.fauxpenverse\.engineering/],
   },
   config: {
     ignoreErrors: [

@@ -35,7 +35,7 @@
       <p class="text-sm mb-4">
         {{
           $t('media-details.content-report.form.disclaimer', {
-            openverse: 'Openverse',
+            fauxpenverse: 'fauxpenverse',
           })
         }}
       </p>

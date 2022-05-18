@@ -1,14 +1,14 @@
 {
-  "name": "openverse-frontend",
+  "name": "fauxpenverse-frontend",
   "version": "2.2.1",
-  "description": "Openverse",
+  "description": "fauxpenverse",
   "packageManager": "pnpm@7.1.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wordpress/openverse-frontend.git"
+    "url": "git+https://github.com/zackkrida/fauxpenverse-frontend.git"
   },
   "bugs": {
-    "url": "https://github.com/wordpress/openverse-frontend/issues"
+    "url": "https://github.com/zackkrida/fauxpenverse-frontend/issues"
   },
   "author": "sebworks",
   "private": true,

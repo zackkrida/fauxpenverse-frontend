@@ -1,9 +1,9 @@
 # Copyright (C) 2021
-# This file is distributed under the same license as Openverse.
+# This file is distributed under the same license as fauxpenverse.
 msgid ""
 msgstr ""
-"Project-Id-Version: Openverse \n"
-"Report-Msgid-Bugs-To: https://github.com/wordpress/openverse/issues \n"
+"Project-Id-Version: fauxpenverse \n"
+"Report-Msgid-Bugs-To: https://github.com/zackkrida/fauxpenverse/issues \n"
 "POT-Creation-Date: 2022-05-17T14:35:39+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -159,7 +159,7 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/components/VMigrationNotice.vue:8
 msgctxt "migration-notice.intro"
-msgid "###cc-search### is now called ###openverse### and joins ###wordpress### as an open source project."
+msgid "###cc-search### is now called ###fauxpenverse### and joins ###wordpress### as an open source project."
 msgstr ""
 
 #. Do not translate words between ### ###.
@@ -315,12 +315,12 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/components/VMetaSearch/VMetaSearchForm.vue:50
 msgctxt "meta-search.caption"
-msgid "###openverse### does not currently index the sources listed above, but through this interface is offering convenient access to search services provided by other independent organizations. ###openverse### has no control over the results that are returned. Do not assume that the results displayed in this search portal are under a CC license. Always verify that the work is actually under a CC license by following the link. If you are in doubt, you should contact the copyright holder directly, or try to contact the site where you found the content."
+msgid "###fauxpenverse### does not currently index the sources listed above, but through this interface is offering convenient access to search services provided by other independent organizations. ###fauxpenverse### has no control over the results that are returned. Do not assume that the results displayed in this search portal are under a CC license. Always verify that the work is actually under a CC license by following the link. If you are in doubt, you should contact the copyright holder directly, or try to contact the site where you found the content."
 msgstr ""
 
 #. Do not translate words between ### ###.
 msgctxt "meta-search.form.unsupported-title"
-msgid "###openverse### does not yet support built-in ###type### search."
+msgid "###fauxpenverse### does not yet support built-in ###type### search."
 msgstr ""
 
 #. Do not translate words between ### ###.
@@ -531,7 +531,7 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/components/VContentReport/VContentReportForm.vue:37
 msgctxt "media-details.content-report.form.disclaimer"
-msgid "For security purposes, ###openverse### collects and retains anonymized IP addresses of those who complete and submit this form."
+msgid "For security purposes, ###fauxpenverse### collects and retains anonymized IP addresses of those who complete and submit this form."
 msgstr ""
 
 #: src/components/VContentReport/VContentReportForm.vue:46
@@ -1206,7 +1206,7 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/pages/feedback.vue:6
 msgctxt "feedback.intro"
-msgid "Thank you for using ###openverse###! We welcome your ideas for improving the tool below. To provide regular feedback, join the ###slack### channel in the ###making-wordpress### Slack workspace."
+msgid "Thank you for using ###fauxpenverse###! We welcome your ideas for improving the tool below. To provide regular feedback, join the ###slack### channel in the ###making-wordpress### Slack workspace."
 msgstr ""
 
 msgctxt "feedback.improve"
@@ -1237,7 +1237,7 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/pages/search-help.vue:4
 msgctxt "search-guide.title"
-msgid "###openverse### Syntax Guide"
+msgid "###fauxpenverse### Syntax Guide"
 msgstr ""
 
 #: src/pages/search-help.vue:7
@@ -1498,7 +1498,7 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/pages/meta-search.vue:7
 msgctxt "meta-search-page.intro"
-msgid "###openverse### is built on top of a catalog that indexes CC-licensed and public domain content from selected sources. Learn more about our ###link###."
+msgid "###fauxpenverse### is built on top of a catalog that indexes CC-licensed and public domain content from selected sources. Learn more about our ###link###."
 msgstr ""
 
 #: src/pages/meta-search.vue:10
@@ -1509,7 +1509,7 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/pages/meta-search.vue:13
 msgctxt "meta-search-page.license"
-msgid "The internet is a big place! There are plenty of search portals and collections, hosting CC-licensed and public domain content, which we aren’t able to index or surface results from within the ###openverse### interface. These are important sources of CC-licensed and public domain content, and we want to make sure that you are able to find the best openly licensed materials possible, regardless of where they are located."
+msgid "The internet is a big place! There are plenty of search portals and collections, hosting CC-licensed and public domain content, which we aren’t able to index or surface results from within the ###fauxpenverse### interface. These are important sources of CC-licensed and public domain content, and we want to make sure that you are able to find the best openly licensed materials possible, regardless of where they are located."
 msgstr ""
 
 #: src/pages/meta-search.vue:15
@@ -1520,7 +1520,7 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/pages/meta-search.vue:18
 msgctxt "meta-search-page.content-types"
-msgid "Meta Search on ###openverse### currently supports image, audio, and video search on external sites."
+msgid "Meta Search on ###fauxpenverse### currently supports image, audio, and video search on external sites."
 msgstr ""
 
 #: src/pages/meta-search.vue:49
@@ -1541,7 +1541,7 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/pages/meta-search.vue:107
 msgctxt "meta-search-page.why.new"
-msgid "For users of the legacy CC Meta Search site, the Meta Search feature on ###openverse### will look familiar. The goal was to ensure that the functionality is not lost, but is updated and embedded within our new search engine for openly licensed content. In addition, the Meta Search feature builds on this functionality, allowing us to quickly add new sources to Meta Search as we discover them, and support new content types in the future, as we expand."
+msgid "For users of the legacy CC Meta Search site, the Meta Search feature on ###fauxpenverse### will look familiar. The goal was to ensure that the functionality is not lost, but is updated and embedded within our new search engine for openly licensed content. In addition, the Meta Search feature builds on this functionality, allowing us to quickly add new sources to Meta Search as we discover them, and support new content types in the future, as we expand."
 msgstr ""
 
 #: src/pages/meta-search.vue:112
@@ -1594,7 +1594,7 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/pages/meta-search.vue:70
 msgctxt "meta-search-page.audio-video.content"
-msgid "###openverse### does not yet support built-in search for some media types, such as videos. For these media types, click on the appropriate tab and you’ll see sources where you can find CC-licensed content."
+msgid "###fauxpenverse### does not yet support built-in search for some media types, such as videos. For these media types, click on the appropriate tab and you’ll see sources where you can find CC-licensed content."
 msgstr ""
 
 #. Do not translate words between ### ###.
@@ -1616,13 +1616,13 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/pages/meta-search.vue:25
 msgctxt "meta-search-page.images.content"
-msgid "###openverse### supports built-in search for some media types, such as images. When you enter a query on the ###openverse### homepage, a page of results will be displayed. Scrolling to the bottom of the page, you have two choices:"
+msgid "###fauxpenverse### supports built-in search for some media types, such as images. When you enter a query on the ###fauxpenverse### homepage, a page of results will be displayed. Scrolling to the bottom of the page, you have two choices:"
 msgstr ""
 
 #. Do not translate words between ### ###.
 #: src/pages/meta-search.vue:30
 msgctxt "meta-search-page.images.continue"
-msgid "###load-more###, and continue browsing in ###openverse###."
+msgid "###load-more###, and continue browsing in ###fauxpenverse###."
 msgstr ""
 
 #. Do not translate words between ### ###.
@@ -1704,13 +1704,13 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/pages/sources.vue:8
 msgctxt "sources.cc-content.where"
-msgid "Where does the content on ###openverse### come from?"
+msgid "Where does the content on ###fauxpenverse### come from?"
 msgstr ""
 
 #. Do not translate words between ### ###.
 #: src/pages/sources.vue:11
 msgctxt "sources.cc-content.content"
-msgid "There is openly licensed content hosted on millions of domains across the breadth of the internet. Our team systematically identifies providers hosting CC-licensed content. If it’s a good fit, we index that content and make it discoverable through ###openverse###."
+msgid "There is openly licensed content hosted on millions of domains across the breadth of the internet. Our team systematically identifies providers hosting CC-licensed content. If it’s a good fit, we index that content and make it discoverable through ###fauxpenverse###."
 msgstr ""
 
 #. Do not translate words between ### ###.
@@ -1722,7 +1722,7 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/pages/sources.vue:23
 msgctxt "sources.cc-content.europeana"
-msgid "###openverse### is especially grateful for the work of ###link###, an organization that works to digitize and make discoverable cultural heritage works across Europe. ###openverse### is able to index hundreds of valuable sources through a single integration with the ###link-api###."
+msgid "###fauxpenverse### is especially grateful for the work of ###link###, an organization that works to digitize and make discoverable cultural heritage works across Europe. ###fauxpenverse### is able to index hundreds of valuable sources through a single integration with the ###link-api###."
 msgstr ""
 
 #: src/pages/sources.vue:30
@@ -1753,31 +1753,31 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/pages/about.vue:4
 msgctxt "about.title"
-msgid "About ###openverse###"
+msgid "About ###fauxpenverse###"
 msgstr ""
 
 #. Do not translate words between ### ###.
 #: src/pages/about.vue:64
 msgctxt "about.declaration.content"
-msgid "Please note that ###openverse### does not verify whether the images are properly CC licensed, or whether the attribution and other licensing information we have aggregated is accurate or complete. Please independently verify the licensing status and attribution information before reusing the content. For more details, read the ###terms###."
+msgid "Please note that ###fauxpenverse### does not verify whether the images are properly CC licensed, or whether the attribution and other licensing information we have aggregated is accurate or complete. Please independently verify the licensing status and attribution information before reusing the content. For more details, read the ###terms###."
 msgstr ""
 
 #. Do not translate words between ### ###.
 #: src/pages/about.vue:68
 msgctxt "about.declaration.terms"
-msgid "###openverse### Terms of Use"
+msgid "###fauxpenverse### Terms of Use"
 msgstr ""
 
 #. Do not translate words between ### ###.
 #: src/pages/about.vue:49
 msgctxt "about.transfer.content"
-msgid "###openverse### is the successor to CC Search which was launched by Creative Commons in 2019, after its migration to WordPress in 2021. You can read more about this transition in the official announcements from ###creative-commons### and ###wordpress###. We remain committed to our goal of tackling discoverability and accessibility of open access media."
+msgid "###fauxpenverse### is the successor to CC Search which was launched by Creative Commons in 2019, after its migration to WordPress in 2021. You can read more about this transition in the official announcements from ###creative-commons### and ###wordpress###. We remain committed to our goal of tackling discoverability and accessibility of open access media."
 msgstr ""
 
 #. Do not translate words between ### ###.
 #: src/pages/about.vue:17
 msgctxt "about.planning.content"
-msgid "Currently ###openverse### only searches images, with search for audio and video provided through ###meta###. But we plan to add additional media types such as open texts and audio, with the ultimate goal of providing access to all 1.4 billion CC licensed and public domain works on the web. All of our code is open source (###search###, ###api###, ###catalog###) and we ###community###. You can see what ###working###."
+msgid "Currently ###fauxpenverse### only searches images, with search for audio and video provided through ###meta###. But we plan to add additional media types such as open texts and audio, with the ultimate goal of providing access to all 1.4 billion CC licensed and public domain works on the web. All of our code is open source (###search###, ###api###, ###catalog###) and we ###community###. You can see what ###working###."
 msgstr ""
 
 #: src/pages/about.vue:20
@@ -1788,13 +1788,13 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/pages/about.vue:29
 msgctxt "about.planning.api"
-msgid "###openverse### API"
+msgid "###fauxpenverse### API"
 msgstr ""
 
 #. Do not translate words between ### ###.
 #: src/pages/about.vue:34
 msgctxt "about.planning.catalog"
-msgid "###openverse### Catalog"
+msgid "###fauxpenverse### Catalog"
 msgstr ""
 
 #: src/pages/about.vue:39
@@ -1810,13 +1810,13 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/pages/about.vue:10
 msgctxt "about.collection.content"
-msgid "###openverse### searches across more than 300 million images from open APIs and the ###common-crawl### dataset. It goes beyond simple search to aggregate results across multiple public repositories into a single catalog, and facilitates reuse through features like machine-generated tags and one-click attribution."
+msgid "###fauxpenverse### searches across more than 300 million images from open APIs and the ###common-crawl### dataset. It goes beyond simple search to aggregate results across multiple public repositories into a single catalog, and facilitates reuse through features like machine-generated tags and one-click attribution."
 msgstr ""
 
 #. Do not translate words between ### ###.
 #: src/pages/about.vue:7
 msgctxt "about.description.content"
-msgid "###openverse### is a tool that allows openly licensed and public domain works to be discovered and used by everyone."
+msgid "###fauxpenverse### is a tool that allows openly licensed and public domain works to be discovered and used by everyone."
 msgstr ""
 
 msgctxt "header.about-nav-item"
@@ -1949,7 +1949,7 @@ msgstr ""
 #. Do not translate words between ### ###.
 #: src/pages/index.vue:63
 msgctxt "hero.disclaimer.content"
-msgid "All ###openverse### content is under a ###license### or is in the public domain."
+msgid "All ###fauxpenverse### content is under a ###license### or is in the public domain."
 msgstr ""
 
 #: src/pages/index.vue:73

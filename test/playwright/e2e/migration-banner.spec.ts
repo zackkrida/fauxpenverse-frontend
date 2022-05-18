@@ -5,7 +5,7 @@ test.describe('migration banner', () => {
     await page.goto('/?referrer=creativecommons.org')
 
     const migrationNotice = page.locator('[data-testid="banner-cc-referral"]')
-    const message = 'CC Search is now called Openverse'
+    const message = 'CC Search is now called fauxpenverse'
 
     await expect(migrationNotice).toContainText(message)
     await expect(migrationNotice).toBeVisible()

@@ -37,7 +37,7 @@ export default function usePages() {
     {
       id: 'api',
       name: 'header.api-nav-item',
-      link: 'https://api.openverse.engineering/v1/',
+      link: 'https://api.fauxpenverse.engineering/v1/',
     },
     {
       id: 'extension',

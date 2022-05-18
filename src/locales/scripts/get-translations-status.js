@@ -7,7 +7,7 @@
 const axios = require('axios')
 const parser = require('node-html-parser')
 
-const baseUrl = `https://translate.wordpress.org/projects/meta/openverse`
+const baseUrl = `https://translate.wordpress.org/projects/meta/fauxpenverse`
 
 function parseRow(row, locales) {
   const cells = row.querySelectorAll('td')

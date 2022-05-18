@@ -8,7 +8,7 @@ title: "<Replace this with actual title>"
 <!-- Consider how soon we need the discussion resolved vs. giving everyone an opportunity to participate.  -->
 ## Due date: yyyy-mm-dd
 
-<!-- Suggest two members of @WordPress/openverse to review the discussion.  -->
+<!-- Suggest two members of @WordPress/fauxpenverse to review the discussion.  -->
 ## Assigned reviewers
 
 - [] TBD

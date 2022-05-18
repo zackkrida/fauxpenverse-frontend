@@ -73,11 +73,11 @@ const pot_creation_date = () => {
 }
 
 const POT_FILE_META = `# Copyright (C) 2021
-# This file is distributed under the same license as Openverse.
+# This file is distributed under the same license as fauxpenverse.
 msgid ""
 msgstr ""
-"Project-Id-Version: Openverse \\n"
-"Report-Msgid-Bugs-To: https://github.com/wordpress/openverse/issues \\n"
+"Project-Id-Version: fauxpenverse \\n"
+"Report-Msgid-Bugs-To: https://github.com/zackkrida/fauxpenverse/issues \\n"
 "POT-Creation-Date: ${pot_creation_date()}\\n"
 "MIME-Version: 1.0\\n"
 "Content-Type: text/plain; charset=UTF-8\\n"

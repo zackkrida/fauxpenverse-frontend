@@ -44,7 +44,7 @@ export default defineComponent({
   setup(props) {
     const i18n = useI18n()
 
-    useMeta({ title: `${props.searchTerm} | Openverse` })
+    useMeta({ title: `${props.searchTerm} | fauxpenverse` })
 
     const results = computed(() => props.resultItems.audio)
 

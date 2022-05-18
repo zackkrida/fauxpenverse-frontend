@@ -10,7 +10,7 @@
       :status="isFetching ? 'loading' : 'idle'"
       :auto-resize="autoResizeLogo"
     />
-    <OpenverseLogoText
+    <fauxpenverseLogoText
       v-show="!isHeaderScrolled"
       class="-ml-1 mt-1 me-3"
       :class="{
@@ -27,11 +27,11 @@ import { defineComponent } from '@nuxtjs/composition-api'
 import VLogoLoader from '~/components/VLogoLoader/VLogoLoader.vue'
 import VButton from '~/components/VButton.vue'
 
-import OpenverseLogoText from '~/assets/icons/openverse-logo-text.svg?inline'
+import fauxpenverseLogoText from '~/assets/icons/fauxpenverse-logo-text.svg?inline'
 
 export default defineComponent({
   name: 'VLogoButton',
-  components: { OpenverseLogoText, VLogoLoader, VButton },
+  components: { fauxpenverseLogoText, VLogoLoader, VButton },
   props: {
     isFetching: {
       type: Boolean,

@@ -140,9 +140,9 @@ jobs:
             output for both Storybook and Nuxt Playwright tests that have failed at the bottom of this
             page, under the "Artifacts" section:
 
-            <https://github.com/WordPress/openverse-frontend/actions/runs/${{ github.run_id }}>
+            <https://github.com/zackkrida/fauxpenverse-frontend/actions/runs/${{ github.run_id }}>
 
-            Read more about how to use this artifact here: <https://github.com/WordPress/openverse-frontend/blob/main/test/playwright/README.md#debugging>
+            Read more about how to use this artifact here: <https://github.com/zackkrida/fauxpenverse-frontend/blob/main/test/playwright/README.md#debugging>
 
   storybook:
     name: Check Storybook build
@@ -170,7 +170,7 @@ jobs:
 
   gh-pages:
     name: PR Storybook and Tailwind Preview
-    if: github.repository == 'WordPress/openverse-frontend' && github.ref != 'refs/heads/main'
+    if: github.repository == 'WordPress/fauxpenverse-frontend' && github.ref != 'refs/heads/main'
     runs-on: ubuntu-latest
 
     steps:
@@ -236,9 +236,9 @@ jobs:
           body: |
             **Storybook and Tailwind configuration previews**: _Ready_
 
-            **Storybook:** <https://wordpress.github.io/openverse-frontend/${{ github.event.pull_request.number }}>
-            **Tailwind:** <https://wordpress.github.io/openverse-frontend/${{ github.event.pull_request.number }}/tailwind>
+            **Storybook:** <https://wordpress.github.io/fauxpenverse-frontend/${{ github.event.pull_request.number }}>
+            **Tailwind:** <https://wordpress.github.io/fauxpenverse-frontend/${{ github.event.pull_request.number }}/tailwind>
 
             Please note that GitHub pages takes a little time to deploy newly pushed code, if the links above don't work or you see old versions, wait 5 minutes and try again.
 
-            You can check [the GitHub pages deployment action list](https://github.com/WordPress/openverse-frontend/actions/workflows/pages/pages-build-deployment) to see the current status of the deployments.
+            You can check [the GitHub pages deployment action list](https://github.com/zackkrida/fauxpenverse-frontend/actions/workflows/pages/pages-build-deployment) to see the current status of the deployments.

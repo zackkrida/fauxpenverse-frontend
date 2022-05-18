@@ -73,7 +73,7 @@ export const getLicenseUrl = (
   } else {
     fragment = `licenses/${license}/${licenseVersion || '4.0'}`
   }
-  return `https://creativecommons.org/${fragment}/?ref=openverse`
+  return `https://creativecommons.org/${fragment}/?ref=fauxpenverse`
 }
 
 /**

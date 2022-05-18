@@ -1,6 +1,6 @@
-# Contributing to Openverse
+# Contributing to fauxpenverse
 
-Thank you for your interest in contributing to Openverse! This document is a set of guidelines to help you contribute to this project.
+Thank you for your interest in contributing to fauxpenverse! This document is a set of guidelines to help you contribute to this project.
 
 ## Code of Conduct
 
@@ -16,13 +16,13 @@ Please read the processes in our general [Contributing Code](https://creativecom
 
 ### Bugs and testing
 
-If you find a bug, please open an issue in this repository describing the bug. You can file a bug [here](https://github.com/wordpress/openverse-frontend/issues/new?template=bug_report.md). You will see a bug report template with the required information you should provide.
+If you find a bug, please open an issue in this repository describing the bug. You can file a bug [here](https://github.com/zackkrida/fauxpenverse-frontend/issues/new?template=bug_report.md). You will see a bug report template with the required information you should provide.
 
 Please see our [testing guidelines](./TESTING_GUIDELINES.md) for general instructions and recommendations for how to test the application.
 
 ### Proposing changes or new features
 
-If you have an idea of a new feature or change to how the Openverse frontend works, please [file an issue](https://github.com/wordpress/openverse-frontend/issues/new?template=feature_request.md) so we can discuss the possibility of that change or new feature being implemented and released in the future. This lets us come to an agreement about the proposed idea before any work is done.
+If you have an idea of a new feature or change to how the fauxpenverse frontend works, please [file an issue](https://github.com/zackkrida/fauxpenverse-frontend/issues/new?template=feature_request.md) so we can discuss the possibility of that change or new feature being implemented and released in the future. This lets us come to an agreement about the proposed idea before any work is done.
 
 If you'd like to build a new feature but don't have a specific idea, please check out the historic [public roadmap](https://docs.google.com/document/d/19yH2V5K4nzWgEXaZhkzD1egzrRayyDdxlzxZOTCm_pc/). Choose something from the pipeline of ideas and follow the same process as above.
 
@@ -30,7 +30,7 @@ If you'd like to build a new feature but don't have a specific idea, please chec
 
 Before you start writing code, make sure there is an issue open. Pull requests without a link to an existing issue won't be merged. All pull requests _must_ target the `develop` branch of the repository.
 
-If you want to get started contributing code to this project but don't know exactly what to work on, we compiled a good list of issues labeled as ['good first issues'](https://github.com/wordpress/openverse-frontend/labels/good%20first%20issue) which are small in scope and not so complex to solve. There are also issues labeled as ['help wanted'](https://github.com/wordpress/openverse-frontend/labels/help%20wanted) which can be a bit more complex but are good examples of things we are currently accepting help from the community.
+If you want to get started contributing code to this project but don't know exactly what to work on, we compiled a good list of issues labeled as ['good first issues'](https://github.com/zackkrida/fauxpenverse-frontend/labels/good%20first%20issue) which are small in scope and not so complex to solve. There are also issues labeled as ['help wanted'](https://github.com/zackkrida/fauxpenverse-frontend/labels/help%20wanted) which can be a bit more complex but are good examples of things we are currently accepting help from the community.
 
 Any code modifications will have to be accompanied by the appropriate unit tests. This will be checked and verified during code review. Once the pull request is opened, our CI server will run the unit test suite and run a code linter to verify that the code follows the coding guidelines.
 
@@ -60,10 +60,10 @@ Some older modules use JSDoc flavored TypeScript. This was primarily used before
 
 We use [Tailwind CSS](https://tailwindcss.com/) for writing styles. There are some legacy components that have been written in "hand-written" CSS. Our aim is to eventually re-write these using Tailwind classes.
 
-Our Tailwind configuration lives at [`./tailwind.config.js`](./tailwind.config.js) and is a useful reference for Openverse specific spacing and color classes. Please refer to the official [Tailwind CSS documentation](https://tailwindcss.com/docs) for a detailed and searchable list of the available classes. At times you'll need to cross reference this documentation with our specific configuration in the `tailwind.config.js` file.
+Our Tailwind configuration lives at [`./tailwind.config.js`](./tailwind.config.js) and is a useful reference for fauxpenverse specific spacing and color classes. Please refer to the official [Tailwind CSS documentation](https://tailwindcss.com/docs) for a detailed and searchable list of the available classes. At times you'll need to cross reference this documentation with our specific configuration in the `tailwind.config.js` file.
 
 We also use the [Tailwind CSS RTL](https://github.com/20lives/tailwindcss-rtl) plugin to make writing [right-to-left (RTL)](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/dir) styles seamless. Most use cases of the right/left based classes should use the start/end variants introduced by the plugin instead.
 
 ## Questions or Thoughts?
 
-Feel free to [join us on Slack](https://make.wordpress.org/chat/) and discuss the project with the engineers and community members on #openverse.
+Feel free to [join us on Slack](https://make.wordpress.org/chat/) and discuss the project with the engineers and community members on #fauxpenverse.

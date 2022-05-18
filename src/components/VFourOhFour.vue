@@ -1,13 +1,13 @@
 <template>
   <main class="bg-yellow h-screen relative page-404 overflow-x-hidden">
     <VLink href="/" class="relative z-10 text-dark-charcoal">
-      <span class="sr-only">Openverse</span>
+      <span class="sr-only">fauxpenverse</span>
       <span
         class="flex flex-row pt-6 lg:pt-8 ms-6 lg:ms-10 h-auto w-30 text-dark-charcoal"
         aria-hidden="true"
       >
-        <OpenverseLogo />
-        <OpenverseBrand class="ms-1" />
+        <fauxpenverseLogo />
+        <fauxpenverseBrand class="ms-1" />
       </span>
     </VLink>
     <Oops
@@ -26,7 +26,7 @@
             <VLink
               class="underline text-current hover:text-current active:text-current"
               href="/"
-              >Openverse</VLink
+              >fauxpenverse</VLink
             >
           </template>
         </i18n>
@@ -59,14 +59,14 @@ import VSearchBar from '~/components/VHeader/VSearchBar/VSearchBar.vue'
 import VLink from '~/components/VLink.vue'
 
 import Oops from '~/assets/oops.svg?inline'
-import OpenverseLogo from '~/assets/logo.svg?inline'
-import OpenverseBrand from '~/assets/brand.svg?inline'
+import fauxpenverseLogo from '~/assets/logo.svg?inline'
+import fauxpenverseBrand from '~/assets/brand.svg?inline'
 
 export default defineComponent({
   name: 'VFourOhFour',
   components: {
-    OpenverseLogo,
-    OpenverseBrand,
+    fauxpenverseLogo,
+    fauxpenverseBrand,
     Oops,
     VLink,
     VSearchBar,

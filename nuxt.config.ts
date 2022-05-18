@@ -24,7 +24,7 @@ const meta = [
     name: 'viewport',
     content: 'width=device-width,initial-scale=1',
   },
-  // Tells Google to only crawl Openverse when iframed
+  // Tells Google to only crawl fauxpenverse when iframed
   { hid: 'googlebot', name: 'googlebot', content: 'noindex,indexifembedded' },
   {
     vmid: 'monetization',
@@ -41,11 +41,11 @@ const meta = [
     content:
       'Search over 600 million free and openly licensed images, photos, audio, and other media types for reuse and remixing.',
   },
-  { hid: 'og:title', name: 'og:title', content: 'Openverse' },
+  { hid: 'og:title', name: 'og:title', content: 'fauxpenverse' },
   {
     hid: 'og:image',
     name: 'og:image',
-    content: '/openverse-default.jpg',
+    content: '/fauxpenverse-default.jpg',
   },
   {
     hid: 'og:description',
@@ -54,7 +54,7 @@ const meta = [
       'Search over 600 million free and openly licensed images, photos, audio, and other media types for reuse and remixing.',
   },
   { name: 'twitter:card', content: 'summary_large_image' },
-  { name: 'twitter:site', content: '@WPOpenverse' },
+  { name: 'twitter:site', content: '@WPfauxpenverse' },
 ]
 
 if (process.env.NODE_ENV === 'production') {
@@ -69,7 +69,7 @@ const favicons = [
   // SVG favicon
   {
     rel: 'icon',
-    href: '/openverse-logo.svg',
+    href: '/fauxpenverse-logo.svg',
   },
   // SVG favicon for Safari
   {
@@ -80,13 +80,13 @@ const favicons = [
   // Fallback iPhone Icon
   {
     rel: 'apple-touch-icon',
-    href: '/openverse-logo-180.png',
+    href: '/fauxpenverse-logo-180.png',
   },
 ]
 
 // Default html head
 const head = {
-  title: 'Openly Licensed Images, Audio and More | Openverse',
+  title: 'Openly Licensed Images, Audio and More | fauxpenverse',
   meta,
   link: [
     ...favicons,
@@ -102,7 +102,7 @@ const head = {
     {
       rel: 'search',
       type: 'application/opensearchdescription+xml',
-      title: 'Openverse',
+      title: 'fauxpenverse',
       href: '/opensearch.xml',
     },
   ],
@@ -274,7 +274,7 @@ const config: NuxtConfig = {
     parameters: {
       options: {
         storySort: {
-          order: ['Introduction', ['Openverse UI']],
+          order: ['Introduction', ['fauxpenverse UI']],
         },
       },
       viewport: {

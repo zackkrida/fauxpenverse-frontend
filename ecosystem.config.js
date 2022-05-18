@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'openverse-frontend',
+      name: 'fauxpenverse-frontend',
       exec_mode: 'cluster',
       instances: 'max',
       cwd: '/home/node/app',

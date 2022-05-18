@@ -6,7 +6,7 @@ This document describes general guidelines you should follow when testing pull r
 
 Please follow the instructions in the README for how to set up and run the application locally. If you want to just generally test the application in its current state (i.e., what exists on `main` as opposed to what has actually been deployed to production) you can find the staging deployment here:
 
-https://search-staging.openverse.engineering
+https://search-staging.fauxpenverse.engineering
 
 Staging is redeployed everytime we merge to the `main` branch, so if you're looking to test the latest version of the app without going through the local set up, that's the easiest way to go.
 
@@ -14,7 +14,7 @@ Once you have the application running, you can visit it in your browser at http:
 
 You can also access it from other devices in your same network (like a mobile phone) for additional testing. See the [finding your local IP address](./README.md#finding-your-local-ip-address) section of the README for how to identify the local IP adress Nuxt is served on. Once you have identified your local IP address, you can access the website running on your computer by visiting `https://<local IP>:8443` replacing `<local IP>` (including the brackets) with the value you found using the instructions above in your mobile devices browser.
 
-Testing from multiple different devices as often as possible is a great way to contribute to Openverse's frontend development.
+Testing from multiple different devices as often as possible is a great way to contribute to fauxpenverse's frontend development.
 
 ## Browsers
 
@@ -62,7 +62,7 @@ Buttons, for example, should have appropriate labels. If the visible text of the
 
 ### Server vs client side render
 
-The Openverse frontend is a Nuxt SSR application. This means the initial Vue page rendering when you make a request is processed by a server and then delivered to you to be "hydrated" with the current state of the page. The implication of this is that there are two ways for _every single page_ to be rendered, and we should test with that in mind. Please make sure that you are testing client side navigation as well as SSR. To test SSR for a page, simply reload the page: it will be rendered in SSR and then delivered to your browser. To test client side rendering for a page, navigate to that page from another page without reloading the page in between. For example, to test the search route client side, you can execute a search from the homepage and it will redirect you client-side to the search page.
+The fauxpenverse frontend is a Nuxt SSR application. This means the initial Vue page rendering when you make a request is processed by a server and then delivered to you to be "hydrated" with the current state of the page. The implication of this is that there are two ways for _every single page_ to be rendered, and we should test with that in mind. Please make sure that you are testing client side navigation as well as SSR. To test SSR for a page, simply reload the page: it will be rendered in SSR and then delivered to your browser. To test client side rendering for a page, navigate to that page from another page without reloading the page in between. For example, to test the search route client side, you can execute a search from the homepage and it will redirect you client-side to the search page.
 
 ## Conclusion
 
@@ -70,7 +70,7 @@ Please note that these are non-expert and non-exhaustive recommendations. Spend 
 
 # Automated tests
 
-Openverse uses [Vue Testing Library](https://testing-library.com/docs/vue-testing-library/intro/) for unit testing with [Jest](https://jestjs.io/docs/), and [Playwright](https://playwright.dev) for end-to-end and visual-regression testing.
+fauxpenverse uses [Vue Testing Library](https://testing-library.com/docs/vue-testing-library/intro/) for unit testing with [Jest](https://jestjs.io/docs/), and [Playwright](https://playwright.dev) for end-to-end and visual-regression testing.
 
 There are also legacy unit tests written in [Vue Test Utils](https://vue-test-utils.vuejs.org/) but those are slated to be re-written using testing library.
 

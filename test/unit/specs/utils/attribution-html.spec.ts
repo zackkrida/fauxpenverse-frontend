@@ -74,7 +74,7 @@ describe('getAttribution', () => {
   it('renders the correct text in plain-text mode', () => {
     const attrText = getAttribution(mediaItem, i18n, { isPlaintext: true })
     const expectation =
-      '"Title" by Creator is marked with Public Domain Mark 1.0. To view the terms, visit https://license/url?ref=openverse.'
+      '"Title" by Creator is marked with Public Domain Mark 1.0. To view the terms, visit https://license/url?ref=fauxpenverse.'
     expect(attrText).toEqual(expectation)
   })
 

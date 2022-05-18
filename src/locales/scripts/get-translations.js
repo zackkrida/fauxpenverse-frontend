@@ -21,7 +21,7 @@ const localeJSON = require('./wp-locales.json')
  * @typedef {("android"|"po"|"mo"|"resx"|"strings"|"properties"|"json"|"jed1x"|"ngx" & JSONFormat)} Format
  */
 
-const baseUrl = `https://translate.wordpress.org/projects/meta/openverse`
+const baseUrl = `https://translate.wordpress.org/projects/meta/fauxpenverse`
 
 /**
  *

@@ -1,7 +1,7 @@
 <template>
   <VContentPage>
     <h1>
-      {{ $t('search-guide.title', { openverse: 'Openverse' }) }}
+      {{ $t('search-guide.title', { fauxpenverse: 'fauxpenverse' }) }}
     </h1>
     <p>
       {{ $t('search-guide.intro') }}
@@ -249,8 +249,8 @@ export default defineComponent({
   head() {
     return {
       title: `${this.$t('search-guide.title', {
-        openverse: 'Openverse',
-      })} | Openverse`,
+        fauxpenverse: 'fauxpenverse',
+      })} | fauxpenverse`,
     }
   },
 })

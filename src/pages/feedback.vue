@@ -5,10 +5,10 @@
     </h1>
     <i18n path="feedback.intro" tag="p">
       <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
-      <template #openverse>Openverse</template>
+      <template #fauxpenverse>fauxpenverse</template>
       <template #slack>
-        <VLink href="https://wordpress.slack.com/messages/openverse/"
-          >#openverse</VLink
+        <VLink href="https://wordpress.slack.com/messages/fauxpenverse/"
+          >#fauxpenverse</VLink
         >
       </template>
       <template #making-wordpress>
@@ -69,7 +69,7 @@ export default defineComponent({
   },
   head() {
     return {
-      title: `${this.$t('feedback.title')} | Openverse`,
+      title: `${this.$t('feedback.title')} | fauxpenverse`,
     }
   },
 })

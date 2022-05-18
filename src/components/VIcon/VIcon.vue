@@ -39,7 +39,7 @@ export default defineComponent({
       default: '0 0 24 24',
     },
     /**
-     * the path to the icon SVG; In a bundled application like Openverse,
+     * the path to the icon SVG; In a bundled application like fauxpenverse,
      * importing an SVG should give us the path to the file.
      */
     iconPath: {

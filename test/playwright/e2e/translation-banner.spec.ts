@@ -16,7 +16,7 @@ test.describe('translation banner', () => {
       page.click('text=contributing a translation'),
     ])
     await expect(page1).toHaveURL(
-      'https://translate.wordpress.org/projects/meta/openverse/ru/default/'
+      'https://translate.wordpress.org/projects/meta/fauxpenverse/ru/default/'
     )
   })
 

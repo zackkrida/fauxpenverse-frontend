@@ -22,7 +22,7 @@ export default defineComponent({
   components: { VImageGrid },
   props: propTypes,
   setup(props) {
-    useMeta({ title: `${props.searchTerm} | Openverse` })
+    useMeta({ title: `${props.searchTerm} | fauxpenverse` })
 
     const results = computed(() => props.resultItems.image)
     const { canLoadMore, onLoadMore } = useLoadMore(props)

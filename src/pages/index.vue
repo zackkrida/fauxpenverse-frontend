@@ -18,14 +18,14 @@
           class="relative hidden lg:block -left-[6.25rem] rtl:-right-[6.25rem]"
         >
           <h1>
-            <span class="sr-only">Openverse</span>
+            <span class="sr-only">fauxpenverse</span>
             <!-- width and height chosen w.r.t. viewBox "0 0 280 42" -->
             <span
               aria-hidden="true"
               class="flex flex-row items-center text-dark-charcoal"
             >
-              <OpenverseLogo class="w-[70px] h-[70px] me-6 xl:me-7" />
-              <OpenverseBrand class="w-[315px] h-[60px]" />
+              <fauxpenverseLogo class="w-[70px] h-[70px] me-6 xl:me-7" />
+              <fauxpenverseBrand class="w-[315px] h-[60px]" />
             </span>
           </h1>
         </VLink>
@@ -65,7 +65,7 @@
           tag="p"
           class="hidden lg:block text-sr mt-4"
         >
-          <template #openverse>Openverse</template>
+          <template #fauxpenverse>fauxpenverse</template>
           <template #license>
             <VLink
               href="https://creativecommons.org/licenses/"
@@ -119,7 +119,7 @@
       tag="p"
       class="lg:hidden text-sr p-6 mt-auto"
     >
-      <template #openverse>Openverse</template>
+      <template #fauxpenverse>fauxpenverse</template>
       <template #license>
         <VLink
           href="https://creativecommons.org/licenses/"
@@ -147,14 +147,14 @@ import VSearchTypeRadio from '~/components/VContentSwitcher/VSearchTypeRadio.vue
 import VSearchTypePopover from '~/components/VContentSwitcher/VSearchTypePopover.vue'
 
 import imageInfo from '~/assets/homepage_images/image_info.json'
-import OpenverseLogo from '~/assets/logo.svg?inline'
-import OpenverseBrand from '~/assets/brand.svg?inline'
+import fauxpenverseLogo from '~/assets/logo.svg?inline'
+import fauxpenverseBrand from '~/assets/brand.svg?inline'
 
 export default {
   name: 'HomePage',
   components: {
-    OpenverseLogo,
-    OpenverseBrand,
+    fauxpenverseLogo,
+    fauxpenverseBrand,
     VSearchTypePopover,
     VSearchTypeRadio,
     VSearchBar,

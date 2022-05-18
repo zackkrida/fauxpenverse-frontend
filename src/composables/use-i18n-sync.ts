@@ -2,7 +2,7 @@ import { computed, useContext } from '@nuxtjs/composition-api'
 
 import type { LocaleObject } from '@nuxtjs/i18n'
 
-const BASE_URL = 'https://translate.wordpress.org/projects/meta/openverse/'
+const BASE_URL = 'https://translate.wordpress.org/projects/meta/fauxpenverse/'
 
 export function useI18nSync() {
   const { app } = useContext()

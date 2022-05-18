@@ -23,7 +23,7 @@ const talkback = require('talkback')
 /** @typedef {ReturnType<TalkbackOptions['tapeDecorator']>} Tape */
 
 const port = 49153
-const host = 'https://api.openverse.engineering'
+const host = 'https://api.fauxpenverse.engineering'
 
 const urlPatterns = {
   search: /\/(?<mediaType>images|audio)\/*\?(?<query>[\w&=]+)/,
@@ -140,7 +140,7 @@ const tapeDecorator = (tape) => {
   const responseBody = bodyUtil.read(tape.res.body).toString()
 
   const fixedResponseBody = responseBody.replace(
-    /https?:\/\/api.openverse.engineering/g,
+    /https?:\/\/api.fauxpenverse.engineering/g,
     `http://localhost:${port}`
   )
 
@@ -156,7 +156,7 @@ const opts = /** @type {Partial<TalkbackOptions>} */ ({
   fallbackMode: talkback.Options.FallbackMode.NOT_FOUND,
   ignoreBody: true,
   allowHeaders: ['connection'],
-  name: 'Openverse e2e proxy',
+  name: 'fauxpenverse e2e proxy',
   summary: false,
   tapeNameGenerator,
   tapeDecorator,

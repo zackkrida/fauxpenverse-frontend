@@ -11,7 +11,7 @@ export const createDetailPageMeta = (title?: string, thumbnail?: string) => {
     },
   ] as MetaPropertyName[]
   if (title) {
-    head.title = `${title} | Openverse`
+    head.title = `${title} | fauxpenverse`
     meta.push({
       hid: 'og:title',
       name: 'og:title',

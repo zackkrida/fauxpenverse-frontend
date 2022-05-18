@@ -7,7 +7,7 @@
     {{
       $t('migration-notice.intro', {
         'cc-search': 'CC Search',
-        openverse: 'Openverse',
+        fauxpenverse: 'fauxpenverse',
         wordpress: 'WordPress',
       })
     }}
@@ -15,7 +15,7 @@
       <template #read-more>
         <VLink
           class="text-white font-bold underline"
-          href="https://wordpress.org/news/2021/05/welcome-to-openverse/"
+          href="https://wordpress.org/news/2021/05/welcome-to-fauxpenverse/"
         >
           {{ $t('migration-notice.read') }}
         </VLink>

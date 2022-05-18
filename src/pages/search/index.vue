@@ -15,7 +15,7 @@ export default defineComponent({
   components: { VAllResultsGrid },
   props: propTypes,
   setup(props) {
-    useMeta({ title: `${props.searchTerm} | Openverse` })
+    useMeta({ title: `${props.searchTerm} | fauxpenverse` })
 
     const { canLoadMore, onLoadMore } = useLoadMore(props)
     return { canLoadMore, onLoadMore }

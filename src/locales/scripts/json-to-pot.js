@@ -7,7 +7,7 @@ const { createPotFile } = require('./json-pot-helpers')
 const matchPotCreationDate = /^"POT-Creation-Date: .*\\n"$/gm
 
 try {
-  const fileName = process.cwd() + '/src/locales/po-files/openverse.pot'
+  const fileName = process.cwd() + '/src/locales/po-files/fauxpenverse.pot'
   const existingPotFile = String(fs.readFileSync(fileName)).replace(
     matchPotCreationDate,
     ''

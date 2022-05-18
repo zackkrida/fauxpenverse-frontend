@@ -17,7 +17,7 @@
         tag="h4"
         class="text-4xl mb-2"
       >
-        <template #openverse>Openverse</template>
+        <template #fauxpenverse>fauxpenverse</template>
         <template #type>
           {{ type }}
         </template>
@@ -47,7 +47,7 @@
     />
 
     <p class="text-sm font-semibold max-w-3xl my-0 mx-auto">
-      {{ $t('meta-search.caption', { openverse: 'Openverse' }) }}
+      {{ $t('meta-search.caption', { fauxpenverse: 'fauxpenverse' }) }}
     </p>
   </section>
 </template>

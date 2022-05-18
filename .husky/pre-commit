@@ -1,9 +1,9 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-# Generate a new openverse.pot file if en.json has changes
+# Generate a new fauxpenverse.pot file if en.json has changes
 TRANSFILE=src/locales/en.json
-POTFILE=src/locales/po-files/openverse.pot
+POTFILE=src/locales/po-files/fauxpenverse.pot
 CHANGED=$(git diff --staged --name-only HEAD)
 
 if [[ "$CHANGED" == *"$TRANSFILE"* ]] && [[ "$CHANGED" != *"$POTFILE"* ]]; then

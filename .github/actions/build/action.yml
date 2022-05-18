@@ -2,7 +2,7 @@
 # push_staging and push_production workflows
 # more info: https://docs.github.com/en/actions/learn-github-actions/reusing-workflows
 
-name: openverse/build
+name: fauxpenverse/build
 description: build a docker image that can be used in different environments
 
 inputs:
@@ -47,7 +47,7 @@ runs:
       uses: docker/metadata-action@v3
       if: ${{ github.event.inputs.is_production == false }}
       with:
-        images: ${{ inputs.aws_account_id }}.dkr.ecr.${{ inputs.aws_region }}.amazonaws.com/openverse/frontend
+        images: ${{ inputs.aws_account_id }}.dkr.ecr.${{ inputs.aws_region }}.amazonaws.com/fauxpenverse/frontend
         tags: |
           type=raw,value=latest
           type=ref,event=branch
@@ -69,7 +69,7 @@ runs:
       uses: docker/metadata-action@v3
       if: ${{ github.event.inputs.is_production == true }}
       with:
-        images: ${{ inputs.aws_account_id }}.dkr.ecr.${{ inputs.aws_region }}.amazonaws.com/openverse/frontend
+        images: ${{ inputs.aws_account_id }}.dkr.ecr.${{ inputs.aws_region }}.amazonaws.com/fauxpenverse/frontend
         flavor: |
           latest=false
         tags: |

@@ -46,7 +46,7 @@ title: "Component: <Replace this with the component name>"
 ## References
 <!-- Include as many references to prior art as you deem necessary or helpful. -->
 
-<!-- Place a link to the Figma node of the component from the Design Library: https://www.figma.com/file/GIIQ4sDbaToCfFQyKMvzr8/Openverse-Design-Library -->
+<!-- Place a link to the Figma node of the component from the Design Library: https://www.figma.com/file/GIIQ4sDbaToCfFQyKMvzr8/fauxpenverse-Design-Library -->
 - **Figma:**
 
 ## Implementation

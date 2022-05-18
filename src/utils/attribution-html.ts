@@ -183,7 +183,7 @@ export const getAttribution = (
   }
   let license = `${fullLicenseName} ${licenseIcons}`.trim()
   if (!isPlaintext && mediaItem.license_url)
-    license = extLink(`${mediaItem.license_url}?ref=openverse`, license)
+    license = extLink(`${mediaItem.license_url}?ref=fauxpenverse`, license)
 
   /* Attribution */
 
@@ -198,7 +198,7 @@ export const getAttribution = (
   if (isPlaintext && mediaItem.license_url) {
     attributionParts['view-legal'] = tFn('view-legal-text', {
       'terms-copy': tFn(isPd ? 'terms-text' : 'copy-text'),
-      url: `${mediaItem.license_url}?ref=openverse`,
+      url: `${mediaItem.license_url}?ref=fauxpenverse`,
     })
   }
 

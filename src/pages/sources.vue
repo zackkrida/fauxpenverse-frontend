@@ -5,10 +5,10 @@
     </h1>
 
     <h3>
-      {{ $t('sources.cc-content.where', { openverse: 'Openverse' }) }}
+      {{ $t('sources.cc-content.where', { fauxpenverse: 'fauxpenverse' }) }}
     </h3>
     <p>
-      {{ $t('sources.cc-content.content', { openverse: 'Openverse' }) }}
+      {{ $t('sources.cc-content.content', { fauxpenverse: 'fauxpenverse' }) }}
     </p>
     <i18n path="sources.cc-content.provider" tag="p">
       <template #flickr>
@@ -21,7 +21,7 @@
       </template>
     </i18n>
     <i18n path="sources.cc-content.europeana" tag="p">
-      <template #openverse>Openverse</template>
+      <template #fauxpenverse>fauxpenverse</template>
       <template #link>
         <VLink href="https://www.europeana.eu/en">Europeana</VLink>
       </template>
@@ -60,7 +60,7 @@
         variant="primary"
         size="disabled"
         class="not-prose font-semibold mt-5 px-6 py-4"
-        href="https://github.com/WordPress/openverse-catalog/issues/new?assignees=&labels=%F0%9F%9A%A6+status%3A+awaiting+triage%2C+%F0%9F%A7%B9+status%3A+ticket+work+required%2C+%E2%98%81%EF%B8%8F+provider%3A+any&template=new-source-suggestion.md&title=%5BSource+Suggestion%5D+Insert+source+name+here"
+        href="https://github.com/zackkrida/fauxpenverse-catalog/issues/new?assignees=&labels=%F0%9F%9A%A6+status%3A+awaiting+triage%2C+%F0%9F%A7%B9+status%3A+ticket+work+required%2C+%E2%98%81%EF%B8%8F+provider%3A+any&template=new-source-suggestion.md&title=%5BSource+Suggestion%5D+Insert+source+name+here"
       >
         {{ $t('sources.issue-button') }}
         <VIcon :icon-path="externalLinkIcon" :rtl-flip="true" class="mx-2" />
@@ -103,7 +103,7 @@ export default defineComponent({
 
   head() {
     return {
-      title: `${this.$t('sources.title')} | Openverse`,
+      title: `${this.$t('sources.title')} | fauxpenverse`,
     }
   },
 })

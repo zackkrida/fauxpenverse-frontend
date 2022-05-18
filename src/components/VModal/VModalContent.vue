@@ -18,7 +18,7 @@
           <slot name="top-bar" :close="hide">
             <!--
               These specific padding and margin values serve to
-              visually align the Openverse logo button in the modal
+              visually align the fauxpenverse logo button in the modal
               with the header logo button so that there isn't a
               jarring "shifting" effect when opening the mobile modal.
             -->

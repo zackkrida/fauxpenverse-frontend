@@ -1,7 +1,7 @@
 {
     meta: {
         createdAt: '2022-03-28T16:05:49.887Z',
-        host: 'https://api.openverse.engineering',
+        host: 'https://api.fauxpenverse.engineering',
     },
     req: {
         headers: {

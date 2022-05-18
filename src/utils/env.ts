@@ -1,4 +1,4 @@
-const apiUrl = process.env.API_URL ?? 'https://api.openverse.engineering/'
+const apiUrl = process.env.API_URL ?? 'https://api.fauxpenverse.engineering/'
 
 /**
  * Default environment variables are set on this key. Defaults are fallbacks to existing env vars.
@@ -7,7 +7,7 @@ const apiUrl = process.env.API_URL ?? 'https://api.openverse.engineering/'
  */
 export const env = {
   apiUrl: apiUrl.endsWith('/') ? apiUrl : `${apiUrl}/`,
-  filterStorageKey: 'openverse-filter-visibility',
+  filterStorageKey: 'fauxpenverse-filter-visibility',
   enableInternalAnalytics: process.env.ENABLE_INTERNAL_ANALYTICS ?? 'false',
   providerUpdateFrequency: `${60 * 60 * 1000}`, // 1 hour
 } as const

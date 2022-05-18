@@ -59,7 +59,7 @@ export default defineComponent({
 
 <style module>
 /**
-  Openverse Logo Loader
+  fauxpenverse Logo Loader
 
   ┌───┐ ┌───┐ ┌──────┐
   │ 1 │ │ 2 │ │   3  │

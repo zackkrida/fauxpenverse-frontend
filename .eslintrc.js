@@ -169,7 +169,7 @@ module.exports = {
           'Creative Commons',
           'Europeana',
           'Flickr',
-          'Openverse',
+          'fauxpenverse',
           'WordPress',
         ],
       },

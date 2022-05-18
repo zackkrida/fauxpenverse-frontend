@@ -1,7 +1,7 @@
 # this build is triggered when a new pre-release has been created
 # it creates a new docker build image based on the tag associated
 
-name: openverse/deploy/production
+name: fauxpenverse/deploy/production
 
 on:
   release:
@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: production
-      url: https://search-prod.openverse.engineering
+      url: https://search-prod.fauxpenverse.engineering
 
     steps:
       # download the source code into the runner

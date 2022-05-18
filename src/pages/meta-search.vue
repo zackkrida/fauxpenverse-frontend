@@ -5,24 +5,24 @@
     </h1>
 
     <i18n path="meta-search-page.intro" tag="p">
-      <template #openverse>Openverse</template>
+      <template #fauxpenverse>fauxpenverse</template>
       <template #link>
         <VLink href="/sources">{{ $t('meta-search-page.link') }}</VLink>
       </template>
     </i18n>
-    <p>{{ $t('meta-search-page.license', { openverse: 'Openverse' }) }}</p>
+    <p>{{ $t('meta-search-page.license', { fauxpenverse: 'fauxpenverse' }) }}</p>
     <h2>
       {{ $t('meta-search-page.content') }}
     </h2>
     <p>
-      {{ $t('meta-search-page.content-types', { openverse: 'Openverse' }) }}
+      {{ $t('meta-search-page.content-types', { fauxpenverse: 'fauxpenverse' }) }}
     </p>
 
     <h2>
       {{ $t('meta-search-page.images.title') }}
     </h2>
     <p>
-      {{ $t('meta-search-page.images.content', { openverse: 'Openverse' }) }}
+      {{ $t('meta-search-page.images.content', { fauxpenverse: 'fauxpenverse' }) }}
     </p>
     <div>
       <ol>
@@ -67,7 +67,7 @@
     </h2>
     <p>
       {{
-        $t('meta-search-page.audio-video.content', { openverse: 'Openverse' })
+        $t('meta-search-page.audio-video.content', { fauxpenverse: 'fauxpenverse' })
       }}
     </p>
     <i18n path="meta-search-page.audio-video.filter" tag="p">
@@ -89,12 +89,12 @@
       <template #issue>
         <VLink
           aria-label="issue"
-          href="https://github.com/WordPress/openverse-catalog/issues/new?assignees=&labels=%F0%9F%9A%A6+status%3A+awaiting+triage%2C%F0%9F%A7%B9+status%3A+ticket+work+required%2C%E2%98%81%EF%B8%8F+provider%3A+any&template=new_source_suggestion.yml&title=%3CSource+name+here%3E"
+          href="https://github.com/zackkrida/fauxpenverse-catalog/issues/new?assignees=&labels=%F0%9F%9A%A6+status%3A+awaiting+triage%2C%F0%9F%A7%B9+status%3A+ticket+work+required%2C%E2%98%81%EF%B8%8F+provider%3A+any&template=new_source_suggestion.yml&title=%3CSource+name+here%3E"
           >{{ $t('meta-search-page.new.issue') }}</VLink
         >
       </template>
       <template #email>
-        <VLink aria-label="email" href="mailto:openverse@wordpress.org">{{
+        <VLink aria-label="email" href="mailto:fauxpenverse@wordpress.org">{{
           $t('meta-search-page.new.email')
         }}</VLink>
       </template>
@@ -104,7 +104,7 @@
     </h2>
     <p>{{ $t('meta-search-page.why.content') }}</p>
     <p>
-      {{ $t('meta-search-page.why.new', { openverse: 'Openverse' }) }}
+      {{ $t('meta-search-page.why.new', { fauxpenverse: 'fauxpenverse' }) }}
     </p>
     <i18n path="meta-search-page.why.feedback-suggestions" tag="p">
       <template #feedback>
@@ -129,7 +129,7 @@ export default defineComponent({
   components: { VContentPage, VLink },
   head() {
     return {
-      title: `${this.$t('meta-search-page.title')} | Openverse`,
+      title: `${this.$t('meta-search-page.title')} | fauxpenverse`,
     }
   },
 })

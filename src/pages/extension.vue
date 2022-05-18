@@ -95,7 +95,7 @@ export default defineComponent({
   },
   head() {
     return {
-      title: `${this.$t('extension.title')} | Openverse`,
+      title: `${this.$t('extension.title')} | fauxpenverse`,
     }
   },
 })

@@ -32,11 +32,10 @@ import {
   Ref,
 } from '@nuxtjs/composition-api'
 
-import { ALL_MEDIA, SupportedSearchType } from '~/constants/media'
-
-import { isMinScreen } from '~/composables/use-media-query'
-import { useI18n } from '~/composables/use-i18n'
+import { ALL_MEDIA, SearchType } from '~/constants/media'
 import useSearchType from '~/composables/use-search-type'
+import { useI18n } from '~/composables/use-i18n'
+import { isMinScreen } from '~/composables/use-media-query'
 import { isHeaderScrolledKey } from '~/layouts/default.vue'
 
 import VIcon from '~/components/VIcon/VIcon.vue'
@@ -53,7 +52,7 @@ export default defineComponent({
       required: true,
     },
     activeItem: {
-      type: String as PropType<SupportedSearchType>,
+      type: String as PropType<SearchType>,
       default: ALL_MEDIA,
     },
     type: {

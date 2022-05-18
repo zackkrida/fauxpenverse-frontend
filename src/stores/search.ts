@@ -7,9 +7,11 @@ import {
   ALL_MEDIA,
   AUDIO,
   IMAGE,
+  SearchType,
   SupportedMediaType,
   SupportedSearchType,
   supportedSearchTypes,
+  isAdditionalSearchType,
 } from '~/constants/media'
 import {
   ApiQueryParams,
@@ -28,17 +30,26 @@ import {
 
 import type { Dictionary } from 'vue-router/types/router'
 
+export const isSearchTypeSupported = (
+  st: SearchType
+): st is SupportedSearchType => {
+  return supportedSearchTypes.includes(st as SupportedSearchType)
+}
+
 export interface SearchState {
-  searchType: SupportedSearchType
+  searchType: SearchType
   searchTerm: string
   filters: Filters
 }
 
 function computeQueryParams(
-  searchType: SupportedSearchType,
+  searchType: SearchType,
   filters: Filters,
   searchTerm: string
 ) {
+  if (isAdditionalSearchType(searchType)) {
+    return {}
+  }
   const query = { ...filtersToQueryData(filters, searchType) }
 
   const queryKeys = Object.keys(query) as (keyof ApiQueryParams)[]
@@ -65,17 +76,23 @@ export const useSearchStore = defineStore('search', {
     filterCategories(state) {
       return Object.keys(state.filters) as FilterCategory[]
     },
+
     /**
      * Returns the search query parameters for API request:
      * drops all parameters with blank values.
      */
     searchQueryParams(state) {
-      return computeQueryParams(
-        state.searchType,
-        state.filters,
-        state.searchTerm
-      )
+      if (isSearchTypeSupported(state.searchType)) {
+        return computeQueryParams(
+          state.searchType,
+          state.filters,
+          state.searchTerm
+        )
+      } else {
+        return { q: state.searchTerm }
+      }
     },
+
     /**
      * Returns the number of checked filters, excluding the `mature` filter.
      */
@@ -89,6 +106,7 @@ export const useSearchStore = defineStore('search', {
         )
       }, 0)
     },
+
     /**
      * Returns the object with filters for selected search type, with codes, names for i18n labels, and checked status.
      */
@@ -100,6 +118,7 @@ export const useSearchStore = defineStore('search', {
           return obj
         }, {} as Filters)
     },
+
     /**
      * True if any filter for selected search type except `mature` is checked.
      */
@@ -114,16 +133,18 @@ export const useSearchStore = defineStore('search', {
       )
     },
     /**
-     * Returns whether the current `seartchType` is a supported media type for search.
+     * Returns whether the current `searchType` is a supported media type for search.
      */
     searchTypeIsSupported(state) {
-      return supportedSearchTypes.includes(state.searchType)
+      return isSearchTypeSupported(state.searchType)
     },
   },
   actions: {
-    setSearchType(type: SupportedSearchType) {
+    setSearchType(type: SearchType) {
       this.searchType = type
-      this.clearOtherMediaTypeFilters(type)
+      if (!isAdditionalSearchType(type)) {
+        this.clearOtherMediaTypeFilters(type)
+      }
     },
     setSearchTerm(term: string) {
       this.searchTerm = term.trim()
@@ -259,6 +280,7 @@ export const useSearchStore = defineStore('search', {
         this.setSearchTerm(urlQuery.q.trim())
       }
       this.searchType = queryStringToSearchType(path)
+      if (!isSearchTypeSupported(this.searchType)) return
       // When setting filters from URL query, 'mature' has a value of 'true',
       // but we need the 'mature' code. Creating a local shallow copy to prevent mutation.
       const query = { ...urlQuery }

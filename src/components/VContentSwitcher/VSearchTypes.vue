@@ -38,7 +38,7 @@
 <script lang="ts">
 import { computed, defineComponent, PropType } from '@nuxtjs/composition-api'
 
-import { SupportedSearchType } from '~/constants/media'
+import type { SearchType } from '~/constants/media'
 import useSearchType from '~/composables/use-search-type'
 import { defineEvent } from '~/types/emits'
 
@@ -58,7 +58,7 @@ export default defineComponent({
       default: 'small',
     },
     activeItem: {
-      type: String as PropType<SupportedSearchType>,
+      type: String as PropType<SearchType>,
       required: true,
     },
     useLinks: {
@@ -67,7 +67,7 @@ export default defineComponent({
     },
   },
   emits: {
-    select: defineEvent<[SupportedSearchType]>(),
+    select: defineEvent<[SearchType]>(),
   },
   setup(props, { emit }) {
     const content = useSearchType()

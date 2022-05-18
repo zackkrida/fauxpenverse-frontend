@@ -13,8 +13,8 @@
 <script lang="ts">
 import { defineComponent, PropType } from '@nuxtjs/composition-api'
 
-import { SupportedSearchType } from '~/constants/media'
-import { ApiQueryParams } from '~/utils/search-query-transform'
+import type { MediaType } from '~/constants/media'
+import type { ApiQueryParams } from '~/utils/search-query-transform'
 
 import VMetaSourceList from '~/components/VMetaSearch/VMetaSourceList.vue'
 
@@ -23,7 +23,7 @@ export default defineComponent({
   components: { VMetaSourceList },
   props: {
     type: {
-      type: String as PropType<SupportedSearchType>,
+      type: String as PropType<MediaType>,
     },
     query: {
       type: Object as PropType<ApiQueryParams>,

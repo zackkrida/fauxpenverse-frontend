@@ -38,7 +38,7 @@ import {
 } from '@nuxtjs/composition-api'
 
 import useSearchType from '~/composables/use-search-type'
-import { SupportedSearchType } from '~/constants/media'
+import type { SearchType } from '~/constants/media'
 import { defineEvent } from '~/types/emits'
 
 import VPopover from '~/components/VPopover/VPopover.vue'
@@ -60,7 +60,7 @@ export default defineComponent({
   },
   props: {
     activeItem: {
-      type: String as PropType<SupportedSearchType>,
+      type: String as PropType<SearchType>,
       required: true,
     },
     placement: {
@@ -69,7 +69,7 @@ export default defineComponent({
     },
   },
   emits: {
-    select: defineEvent<SupportedSearchType>(),
+    select: defineEvent<SearchType>(),
   },
   setup(props, { emit }) {
     const content = useSearchType()
@@ -91,7 +91,7 @@ export default defineComponent({
       }
     }
 
-    const selectItem = (item) => {
+    const selectItem = (item: SearchType) => {
       emit('select', item)
     }
 
